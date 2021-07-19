@@ -25,8 +25,8 @@ def find_html(soup):
 
 def excel_save(filename):
     df = pd.DataFrame.from_dict(all_films)  # Construct dataframe from the list of dict
-    writer = pd.ExcelWriter(f"{filename}.xlsx")  # Init Pandas excel writer, using the file name 'baseball.xlsx'
-    df.to_excel(writer, "IMDb_sheet")  # Writes to a sheet called 'baseball_sheet'. Format follows the Dataframe format.
+    writer = pd.ExcelWriter(f"{filename}.xlsx")  # Init Pandas excel writer, using the 'filename' variable
+    df.to_excel(writer, "IMDb_sheet")  # Writes to a sheet called 'IMDb_sheet'. Format follows the Dataframe format.
     writer.save()  # Save excel
 
         
