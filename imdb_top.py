@@ -8,8 +8,7 @@ def find_html(soup):
     global all_films
     if all_films != []:
         all_films = []
-    else:
-        pass
+        
     rows = soup.find("tbody", class_ = "lister-list")  # Finds a tbody tag in a class named "lister-list"
     movies = rows.find_all("tr") # Finds all the rows in that tag
     for movie in movies:
